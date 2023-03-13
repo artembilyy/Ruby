@@ -21,9 +21,9 @@ end
 puts "Odd numbers - #{odd_numbers}"
 puts "Even numbers - #{even_numbers}"
 puts "Now we try to use partition with even? which return true or false"
-odds, evens = array_numbers.partition(&:even?)
-puts "Odd - #{evens}"
-puts "Even - #{odds}"
+evens, odds = array_numbers.partition(&:even?)
+puts "Evens - #{evens}"
+puts "Odds - #{odds}"
 
 =begin
 2. Given an array [1, 2, 34, 5, 6, 7, 8 ,9], 
@@ -40,7 +40,7 @@ for number in numbers do
 end
 puts "Sum of array #{sum}"
 puts "Now lets find sum again using a method"
-sum = numbers.inject(sum) { |sum, number| sum + number }
+sum = numbers.inject(:+)
 puts "Done! So, make some magic..."
 puts "Final sum of array #{sum} by 2 actions"
 
